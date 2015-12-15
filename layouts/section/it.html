@@ -1,0 +1,24 @@
+{{ partial "site_header.html" . }}
+    <div id="container">
+      <section id="main">
+	{{ range (.Paginator 10).Pages }}
+	{{ .Render "li"}}
+	{{ end }}
+	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+	<section id="pages">
+	  <nav role="pagination">
+	    {{ if .Paginator.HasPrev }}
+	    <a href="{{ .Paginator.Prev.URL }}">前へ</a>
+	    {{ end }}
+	    <span> Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+	    {{ if .Paginator.HasNext }}
+	    <a href="{{ .Paginator.Next.URL }}">次へ</a>
+	    {{ end }}
+	  </nav>
+	</section>
+	{{ end }}
+        
+      </section>
+{{ partial "site_sider.html" . }}    
+    </div>
+{{ partial "site_footer.html" }}
