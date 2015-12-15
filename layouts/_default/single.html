@@ -1,0 +1,27 @@
+{{ partial "site_header.html" . }}
+    <div id="container">
+      <section id="main">
+        <article>
+          <header class="article-header">
+            <h1 class="article-title">{{ .Title }}</h1>
+            <div class="article-sub">
+              <div class="article-tags">
+                  tags: 
+		  {{ range .Params.tags }}
+		    <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
+		  {{ end }}
+              </div>
+              <div class="article-time">
+                  post date: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+              </div>
+            </div>
+          </header>
+          <section class="article-entry">
+            {{ .Content }}
+          </section>
+        </article>
+        
+      </section>
+{{ partial "site_sider.html" }}    
+    </div>
+{{ partial "site_footer.html" }}

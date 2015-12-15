@@ -1,0 +1,11 @@
+{{ partial "site_header.html" . }}
+    <div id="container">
+      <section id="main">
+	{{ range .Data.Pages }}
+	{{ .Render "li"}}
+	{{ end }}
+        
+      </section>
+{{ partial "site_sider.html" }}    
+    </div>
+{{ partial "site_footer.html" }}

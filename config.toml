@@ -1,0 +1,15 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "jp"
+title = "tajamaru Dairy"
+
+
+[Indexes]
+tag = "tags"
+
+
+
+[Params]
+site_name_jp = "Tajamaru Dairy"
+author = "Kazuyuki Takashima"
+description = "目指せ永遠の17歳！！"
+DateForm = "2006-01-02"
