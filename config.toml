@@ -1,9 +1,30 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "jp"
 title = "tajamaru Dairy"
+[[menu.main]]
+name = "Home"
+url = ""
+weight = -200
+[[menu.main]]
+name = "It"
+url = "/it/"
+weight = -180
+[[menu.main]]
+name = "レビュー"
+url = "/review/"
+weight = -160
+[[menu.main]]
+name = "other"
+url = "/other/"
+weight = -140
+[[menu.main]]
+name = "about"
+url = "/about/"
+weight = -120
 
 
-[Indexes]
+
+[taxonomies]
 tag = "tags"
 
 

@@ -16,10 +16,12 @@
       </div>
       <nav id="section-list">
         <ul id="header-categories">
-          <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-          <li><a href="{{ .Site.BaseURL }}it">IT</a></li>
-          <li><a href="{{ .Site.BaseURL }}other">Other</a></li>
-          <li><a href="{{ .Site.BaseURL }}about">About</a></li>
+          {{ $currentNode := . }}
+          {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
         </ul>
       </nav>
     </header>
