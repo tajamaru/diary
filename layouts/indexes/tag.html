@@ -2,7 +2,9 @@
     <div id="container">
       <section id="main">
 	{{ range (.Paginator 10).Pages }}
+	{{ if eq .Params.menu.main.identifier nil }}
 	{{ .Render "li"}}
+	{{ end }}
 	{{ end }}
 	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 	<section id="pages">

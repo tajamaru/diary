@@ -1,7 +1,10 @@
 {{ partial "site_header.html" . }}
     <div id="container">
       <section id="main">
-	{{ range (.Paginator 10).Pages }}
+	<nav class="nav">
+	  {{ $.Scratch.Get "Breadcrumbs" |safeHTML }}
+	</nav>
+	{{ range (.Paginator 10).Pages }}  
 	{{ .Render "li"}}
 	{{ end }}
 	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}

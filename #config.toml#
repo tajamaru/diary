@@ -1,7 +1,6 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "jp"
 title = "tajamaru Dairy"
-SectionPageMenu = "main"
 [[menu.main]]
 name = "Home"
 url = ""
@@ -11,11 +10,6 @@ name = "It"
 url = "/it/"
 identifier = "it"
 weight = -180
-[[menu.main]]
-name = "Programs"
-identifier = "it-programs"
-url = "/it/programs/"
-parent = "it"
 [[menu.main]]
 name = "レビュー"
 url = "/review/"
