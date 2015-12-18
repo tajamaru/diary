@@ -1,8 +1,8 @@
 {{ partial "site_header.html" . }}
 {{ partial "breadcrumbs" . }}
 <div id="container">
-        <section id="main">
-	{{ range (.Paginator 10).Pages }}  
+      <section id="main">
+	{{ range (.Paginator 10).Pages }}
 	{{ .Render "li"}}
 	{{ end }}
 	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}

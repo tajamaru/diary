@@ -1,0 +1,30 @@
+      <nav id="section-list">
+        <ul id="header-categories">
+          {{ $currentNode := . }}
+          {{ range .Site.Menus.main }}
+	  {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
+	  {{ $.Scratch.Set "CurrentMenu" . }}
+	  {{ $.Scratch.Add "Breadcrumbs" (print "  <a href='" .URL  "'>" .Name "</a>" )  }}
+	  {{ end }}
+
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+	    {{ if .HasChildren }}
+	    <ul>
+	      {{ range .Children }}
+	      {{ if .HasChildren }}
+	      <li>
+		<a href="{{ .URL }}">{{ .Name }}</a>
+	      </li>
+	      {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
+	      {{ $.Scratch.Set "CurrentMenu" . }}
+	      {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+	      {{ end }}
+	      {{ end }}
+              {{ end }}
+	    </ul>
+	    {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </nav>

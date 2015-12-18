@@ -4,7 +4,8 @@ title = "tajamaru Dairy"
 SectionPageMenu = "main"
 [[menu.main]]
 name = "Home"
-url = ""
+url = "/"
+identifier = "home"
 weight = -200
 [[menu.main]]
 name = "It"
@@ -13,8 +14,8 @@ identifier = "it"
 weight = -180
 [[menu.main]]
 name = "Programs"
-identifier = "it-programs"
-url = "/it/programs/"
+identifier = "programs"
+url = "/series/programs/"
 parent = "it"
 [[menu.main]]
 name = "レビュー"
@@ -33,7 +34,7 @@ weight = -120
 
 [taxonomies]
 tag = "tags"
-
+series = "series"
 
 
 [Params]

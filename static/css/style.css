@@ -100,11 +100,14 @@ time {
 		width: 100%;
 	}
 }
+#breadcrumbs {
+    margin: 0.5em 0 0 0.5em;
+}
 #main {
 /*    display: inline; */
     float: left;
     width: 900px;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
 /*    padding-bottom: 150px; */
 }
 
@@ -126,7 +129,7 @@ time {
     overflow: hidden;
 /*    display: inline; */
     width: 270px;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
 }
 
 @media screen and (max-width: 990px) {
