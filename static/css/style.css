@@ -64,7 +64,7 @@ body>header {
 #header-categories li ul {
     padding: 0.6em 3em;
     position:absolute;
-    top:2.4em;
+    top:2.7em;
     left:0px;
     display: none;
     background-color: #3f1b0f;
@@ -173,12 +173,13 @@ time {
 }
 
 .nav-wrap {
-    padding-bottom: 1.5em
+    padding-bottom: 1.5em;
 }
 
-.nav-wrap>h1 {
+.nav-wrap> h1 {
     padding-bottom: 0.5em;
     border-bottom: solid 2px #D7CCC8;
+    font-weight: bold;
 }
 
 .nav-wrap li {
@@ -188,8 +189,8 @@ time {
 .article-title {
     font-size: 1.5em;
     font-weight: bold;
-    color: #817c7c;
-
+/*    color: #817c7c;
+*/
 }
 .article-header {
     border-bottom: solid 2px #D7CCC8;

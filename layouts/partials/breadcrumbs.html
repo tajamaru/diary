@@ -1,3 +1,7 @@
+
 	<nav id="breadcrumbs">
-	  <a href=" {{ .Site.BaseURL }} ">Home</a> > {{ $.Scratch.Get "Breadcrumbs"  | safeHTML }}
+	  <a href=" {{ .Site.BaseURL }} ">Home</a> 
+	  {{ if ne ($.Scratch.Get "Breadcrumbs") nil }}
+> {{ $.Scratch.Get "Breadcrumbs" | safeHTML }} 
+{{ end }}
 	</nav>
