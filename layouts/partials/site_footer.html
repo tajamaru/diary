@@ -2,6 +2,14 @@
       <div>written by Tajamaru</div>
       <script src="{{ .Site.BaseURL }}js/highlight.pack.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script>
+	$(function(){
+		$("#section-list-toggle> button").on("click", function() {
+			$("#section-list").slideToggle();
+		});
+	});
+</script>
     </footer>
     </script>
   </body>
