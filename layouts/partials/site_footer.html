@@ -3,11 +3,17 @@
       <script src="{{ .Site.BaseURL }}js/highlight.pack.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="{{ .Site.BaseURL }}js/toggle.js"></script>
       <script>
 	$(function(){
-		$("#section-list-toggle> button").on("click", function() {
+		$("#section-list-toggle> a").on("click", function() {
 			$("#section-list").slideToggle();
 		});
+	$(window).on("resize", function () {
+		if ($(window).width() > 750) {
+			$('#section-list').css('display','');
+		}
+	}).resize();
 	});
 </script>
     </footer>
